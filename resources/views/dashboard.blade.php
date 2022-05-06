@@ -24,7 +24,10 @@
         <nav id="navbar">
             @yield('navbar')
         </nav>
+        <header id="home-banner">
             @yield('content')
+        </header>
+
         <footer id="home-banner-footer">
             @yield('footer')
         </footer>
