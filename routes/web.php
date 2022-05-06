@@ -23,7 +23,9 @@ Route::get('/', [HomepageController::class, 'getHomePageLayout']);
 
 Route::get('login', [LoginController::class, 'getLoginPage']);
 
-Route::get('expansions', [ExpansionsController::class, 'getExpansionsPage']);
+Route::get('expansions', [ExpansionsController::class, 'index'])->name('expansions');
+
+Route::get('expansions/{set_id}', [ExpansionsController::class, 'show'])->name('selected_expansion');
 
 /* Login&Register routes */
 Route::post('custom-register', [HomepageController::class, 'customRegister']);
