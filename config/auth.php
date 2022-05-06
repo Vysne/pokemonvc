@@ -108,6 +108,7 @@ return [
 
     'password_timeout' => 10800,
 
+    /* POKEMON API Details */
     'pokemon_api_auth' => [
         'pokemon_url' => env('POKEMON_API_URL', ''),
         'pokemon_api' => env('POKEMON_API', ''),

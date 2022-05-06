@@ -19,20 +19,28 @@ use App\Http\Controllers\LoginController;
 //    return view('welcome');
 //});
 
-Route::get('/', [HomepageController::class, 'getHomePageLayout']);
+//Route::get('/', [HomepageController::class, 'getHomePageLayout']);
+//
+//Route::get('login', [LoginController::class, 'getLoginPage']);
+//
+//Route::get('expansions', [ExpansionsController::class, 'index'])->name('expansions');
+//
+//Route::get('expansions/{set_id}', [ExpansionsController::class, 'show'])->name('selected_expansion');
+//
+///* Login&Register routes */
+//Route::post('custom-register', [HomepageController::class, 'customRegister']);
+//
+//Route::post('custom-login', [LoginController::class, 'customLogin']);
+//
+//Route::get('signout', [LoginController::class, 'signOut']);
+//
+///* Authenticated user routes */
+//Route::get('dashboard', [LoginController::class, 'dashboard'])->name('dashboard');
 
-Route::get('login', [LoginController::class, 'getLoginPage']);
+Route::get('/', function() {
+   return view('home');
+});
 
-Route::get('expansions', [ExpansionsController::class, 'index'])->name('expansions');
+Route::get('login', [LoginController::class, 'index'])->name('login');
 
-Route::get('expansions/{set_id}', [ExpansionsController::class, 'show'])->name('selected_expansion');
-
-/* Login&Register routes */
-Route::post('custom-register', [HomepageController::class, 'customRegister']);
-
-Route::post('custom-login', [LoginController::class, 'customLogin']);
-
-Route::get('signout', [LoginController::class, 'signOut']);
-
-/* Authenticated user routes */
-Route::get('dashboard', [LoginController::class, 'dashboard'])->name('dashboard');
+Route::get('register', [])->name('register');

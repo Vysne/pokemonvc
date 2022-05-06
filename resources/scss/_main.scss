@@ -13,13 +13,15 @@
     box-sizing: border-box;
 }
 
-html,
-body {
+html {
     width: 100%;
     height: 100%;
 }
 
-body { background-color: blue; }
+body {
+    width: 100%;
+    height: 100%;
+}
 
 a {
     text-decoration: none;
@@ -30,19 +32,20 @@ a {
     display: block;
     overflow: hidden;
     position: relative;
+
+    &:before {
+        height: 200px;
+        background-color: #061b29;
+        bottom: 0;
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 1;
+    }
 }
 
-#home-banner:before {
-    height: 200px;
-    background-color: #061b29;
-    bottom: 0;
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: 1;
-}
 #home-banner-content {
     align-items: center;
     display: flex;
@@ -152,7 +155,7 @@ a {
 .card {
     width: 25%;
     margin-top: 5%;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .card-header {
@@ -194,19 +197,20 @@ a {
 }
 
 /* Buttons */
+
 .loginbutton {
-    background:rgb(244 159 40);
+    background: rgb(244 159 40);
     border-radius: 5px;
     width: 50%;
     margin-left: 25%;
-}
 
-.loginbutton:hover {
-    background-color: transparent;
-    background-color: white;
-    border-color: white;
-    box-shadow: black;
-    transition: 0.3s;
+    &:hover {
+        background-color: transparent;
+        background-color: white;
+        border-color: white;
+        box-shadow: black;
+        transition: 0.3s;
+    }
 }
 
 #page-content {
@@ -245,19 +249,20 @@ a {
     color: white;
 }
 
-.expansions-card .card-title {
-    font-size: 16px;
-    font-family: Do Hyeon,sans-serif;
-    text-transform: uppercase;
-}
+.expansions-card {
+    .card-title {
+        font-size: 16px;
+        font-family: Do Hyeon,sans-serif;
+        text-transform: uppercase;
+    }
 
-.expansions-card img {
-    width: 90%;
-}
+    img {
+        width: 90%;
+    }
 
-.expansions-card:hover {
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
-    rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    &:hover {
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    }
 }
 
 .expansion-cards {
@@ -276,10 +281,10 @@ a {
     font-size: 16px;
     font-family: Do Hyeon,sans-serif;
     text-transform: uppercase;
-}
 
-.card img {
-    width: 200px;
+    img {
+        width: 200px;
+    }
 }
 
 .expansion-full-img > img {
@@ -290,6 +295,7 @@ a {
     #home-banner-inner-content {
         margin-right: -220px;
     }
+
     #home-banner-artwork {
         height: 600px;
         right: 50%;
@@ -385,4 +391,3 @@ a {
         height: 100px;
     }
 }
-
