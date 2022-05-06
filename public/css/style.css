@@ -7,6 +7,10 @@ body {
     color: #fff;
 }
 
+a {
+    text-decoration: none;
+}
+
 #home-banner {
     background-color: #112b45;
     display: block;
@@ -148,10 +152,13 @@ body {
     margin-top: 1%;
     margin-left: 10%;
     padding: 10px;
+    font-family: sans-serif;
 }
 
 .card-footer {
     margin-top: 1%;
+    font-family: sans-serif;
+    text-transform: none;
 }
 
 #home-banner-footer {
@@ -199,9 +206,16 @@ body {
     margin: 125px auto;
 }
 
+.cards-wrapper {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 125px auto;
+}
+
 .expansions-card {
     width: 300px;
-    border: 1px solid #000;
+    border: 1px solid white;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -232,18 +246,30 @@ body {
     rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
+.expansion-cards {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5px;
+    text-align: center;
+    transition: .5s;
+    margin: 3px 3px;
+}
+
 .card {
     font-size: 16px;
     font-family: Do Hyeon,sans-serif;
     text-transform: uppercase;
 }
 
-.card p {
-    width: 100px;
-}
-
 .card img {
     width: 200px;
+}
+
+.expansion-full-img > img {
+    width: 20%;
 }
 
 @media (min-width: 768px) {
