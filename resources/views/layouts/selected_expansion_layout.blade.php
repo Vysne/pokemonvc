@@ -32,23 +32,23 @@
 @endsection
 
 @section('content')
-<div class="expansions-wrapper">
+<div class="cards-wrapper">
     <div class="expansion-top">
         <div class="expansion-full-img">
-            <img src="{{$data['images']['logo']}}" alt="{{$data['name']}}">
+            <img src="{{$data['images']['logo']}}" alt="{{$data['name']}}" width="300px" height="100px">
             <h1 class="expansion-title">{{$data['name']}}</h1>
             <p>{{$data['total']}}</p>
             <p>{{$data['releaseDate']}}</p>
         </div>
     </div>
+    @foreach($cards as $card)
     <div class="expansion-cards">
-        @foreach($cards as $card)
-            <div class="card">
-                <p>{{$card['name']}}</p>
-                <img src="{{$card['images']['small']}}" alt="{{$card['name']}}">
-            </div>
-        @endforeach
+        <div class="card">
+            <p>{{$card['name']}}</p>
+            <img src="{{$card['images']['small']}}" alt="{{$card['name']}}">
+        </div>
     </div>
+    @endforeach
 </div>
 @endsection
 
