@@ -24,23 +24,24 @@
         @yield('navbar')
         <div class="d-flex justify-content-center position">
             <div class="card">
-                @yield('register')
+                @yield('login')
             </div>
         </div>
         <header id="home-banner">
-            <div class="container">
-                <div id="home-banner-content">
-                    <div id="home-banner-inner-content">
-                        <img id="home-banner-artwork" src="assets/homepage.png">
+                <div class="container">
+                    <div id="home-banner-content">
+                        <div id="home-banner-inner-content">
+                            <img id="home-banner-artwork" src="assets/homepage.png">
+                        </div>
                     </div>
                 </div>
-            </div>
         </header>
-        <footer id="home-banner-footer">
-            @yield('footer')
-        </footer>
+    <footer id="home-banner-footer">
+        @yield('footer')
+    </footer>
 
-        <!-- Bootstrap JS -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
     </body>
 </html>

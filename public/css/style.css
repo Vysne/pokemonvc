@@ -3,11 +3,11 @@ body {
     flex-direction: column;
     min-height: 100%;
     margin: 0;
+    background: #112b45;
 }
 
 #home-banner {
     background-color: #112b45;
-    border-top: 2px solid #163859;
     display: block;
     overflow: hidden;
     position: relative;
@@ -31,7 +31,7 @@ body {
 
 #home-banner-inner-content {
     margin-bottom: 0rem;
-    margin-top: 0rem;
+    margin-top: 10%;
     max-width: 480px;
     position: relative;
     z-index: 3;
@@ -60,15 +60,22 @@ body {
 
 .card-header {
     max-width: 100%;
-    margin-left: -20%;
+    text-align: center;
     font-family: "Do Hyeon";
     font-size: 1.5rem;
 }
 
+.title {
+    text-align: center;
+    padding: 10px;
+    color: white;
+    border-bottom: solid 2px #163859;
+}
+
 .register-body {
-    /*margin-top: 81%;*/
+    margin-top: 25.1%;
     width: 100%;
-    margin-left: -20%;
+    margin-left: 85%;
 }
 
 .input-group-text {
@@ -95,6 +102,10 @@ body {
     font-size: 1.5rem;
 }
 
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 165, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
 .navbar-menu {
     display: flex;
     list-style: none;
@@ -117,6 +128,29 @@ body {
     white-space: nowrap;
     font-family: Do Hyeon,sans-serif;
     text-decoration: none;
+}
+
+.card {
+    width: 25%;
+    margin-top: 5%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.card-header {
+    margin-top: 1%;
+    margin-left: 0;
+    padding: 10px;
+}
+
+.card-body {
+    width: 80%;
+    margin-top: 1%;
+    margin-left: 10%;
+    padding: 10px;
+}
+
+.card-footer {
+    margin-top: 1%;
 }
 
 #home-banner-footer {
@@ -153,16 +187,6 @@ body {
     transition: 0.3s;
 }
 
-@media (min-width: 768px) {
-    #home-banner-inner-content {
-        margin-right: -220px;
-    }
-    #home-banner-artwork {
-        height: 600px;
-        margin-top: -21.6rem;
-    }
-}
-
 #page-content {
     padding: 2rem 0;
 }
@@ -182,4 +206,103 @@ body {
     padding: 1rem;
 }
 
+@media (min-width: 768px) {
+    #home-banner-inner-content {
+        margin-right: -220px;
+    }
+    #home-banner-artwork {
+        height: 600px;
+        right: 50%;
+    }
+}
+
+@media only screen and (max-width: 2048px) {
+    .card {
+        width: 30%;
+        margin-top: 6%;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .card {
+        width: 50%;
+        margin-top: 15%;
+    }
+
+    #home-banner-artwork {
+        height: 660px;
+        right: 70%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .card {
+        width: 50%;
+        margin-top: 15%;
+    }
+
+    #home-banner-artwork {
+        width: 930px;
+        height: 770px;
+        right: 90%;
+    }
+
+    #home-banner:before {
+        height: 250px;
+    }
+}
+
+@media only screen and (max-width: 920px) {
+    .card {
+        width: 50%;
+        margin-top: 15%;
+    }
+
+    #home-banner-artwork {
+        width: 930px;
+        height: 770px;
+        right: 100%;
+    }
+
+    #home-banner:before {
+        height: 250px;
+    }
+}
+
+@media only screen and (max-width: 820px) {
+    .card {
+        width: 50%;
+        margin-top: 15%;
+    }
+
+    #home-banner-artwork {
+        width: 800px;
+        height: 575px;
+        right: 95%;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    .card {
+        width: 70%;
+        margin-top: 30%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .card {
+        width: 70%;
+        margin-top: 30%;
+    }
+
+    #home-banner-artwork {
+        width: 400px;
+        height: 300px;
+        right: 100%;
+    }
+
+    #home-banner:before {
+        height: 100px;
+    }
+}
 
