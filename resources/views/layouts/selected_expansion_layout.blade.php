@@ -32,22 +32,24 @@
 @endsection
 
 @section('content')
-<div class="cards-wrapper">
+<div class="cards-top-wrapper">
     <div class="expansion-top">
         <div class="expansion-full-img">
-            <img src="{{$data['images']['logo']}}" alt="{{$data['name']}}" width="300px" height="100px">
-            <h1 class="expansion-title">{{$data['name']}}</h1>
-            <p>{{$data['total']}}</p>
-            <p>{{$data['releaseDate']}}</p>
+            <img src="{{$data['images']['logo']}}" alt="{{$data['name']}}" width="250px" height="200px">
+            <h1 class="expansion-title">Expansion title: {{$data['name']}}</h1>
+            <p>Expansion total cards: {{$data['total']}}</p>
+            <p>Expansion release date: {{$data['releaseDate']}}</p>
         </div>
     </div>
+</div>
+<div class="cards-bottom-wrapper">
     @foreach($cards as $card)
-    <div class="expansion-cards">
-        <div class="card">
+        <div class="card-container">
             <p>{{$card['name']}}</p>
             <img src="{{$card['images']['small']}}" alt="{{$card['name']}}">
+{{--            {{var_dump($card['cardmarket']['prices'])}}--}}
+{{--            <p>{{$card['cardmarket']['prices']['averageSellPrice']}}</p>--}}
         </div>
-    </div>
     @endforeach
 </div>
 @endsection
