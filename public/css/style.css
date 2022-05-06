@@ -232,20 +232,19 @@ body {
     rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
-/*.expansions-series-containers {*/
-/*    display: flex;*/
-/*    flex-wrap: wrap;*/
-/*    margin: -0.375rem;*/
-/*}*/
+.card {
+    font-size: 16px;
+    font-family: Do Hyeon,sans-serif;
+    text-transform: uppercase;
+}
 
-/*.expansions-container {*/
-/*    border: 1px solid white;*/
-/*    border-radius: 0.375rem;*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    margin: 0.375rem;*/
-/*    padding: 1rem;*/
-/*}*/
+.card p {
+    width: 100px;
+}
+
+.card img {
+    width: 200px;
+}
 
 @media (min-width: 768px) {
     #home-banner-inner-content {

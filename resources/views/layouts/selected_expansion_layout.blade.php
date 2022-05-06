@@ -44,7 +44,7 @@
     <div class="expansion-cards">
         @foreach($cards as $card)
             <div class="card">
-                <p>{{$card['id']}}</p>
+                <p>{{$card['name']}}</p>
                 <img src="{{$card['images']['small']}}" alt="{{$card['name']}}">
             </div>
         @endforeach
