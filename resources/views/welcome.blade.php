@@ -6,41 +6,44 @@
 
     <title>Pokemonvc</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Do Hyeon" rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
-
     <!-- Styles -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css')}}">
 
 </head>
     <body>
-        @yield('navbar')
-        <div class="d-flex justify-content-center position">
-            <div class="card">
-                @yield('register')
-            </div>
-        </div>
-        <header id="home-banner">
-            <div class="container">
-                <div id="home-banner-content">
-                    <div id="home-banner-inner-content">
-                        <img id="home-banner-artwork" src="assets/homepage.png">
+    <div class="page-brand">
+        <img src="{{ asset('assets/logo.png') }}" alt="Pokemon VC Logo">
+        <h3 class="display-6">Pokemon VC</h3>
+    </div>
+    <section id="welcome-container" class="container-fluid">
+        <div class="row">
+            <!-- LEFT SIDE (LOGIN) -->
+            <div class="col-lg-6 left-side">
+                <div class="content-wrapper">
+                    <div class="link-wrapper">
+                        <a href="{{ route('login') }}" class="link">
+                            <h2 class="display-5">Login</h2>
+                            <img src="{{ asset('assets/svg/charmander.svg') }}" alt="Charmander Image">
+                        </a>
                     </div>
                 </div>
             </div>
-        </header>
-        <footer id="home-banner-footer">
-            @yield('footer')
-        </footer>
 
-        <!-- Bootstrap JS -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+            <!-- RIGHT SIDE (REGISTER) -->
+            <div class="col-lg-6 right-side">
+                <div class="content-wrapper">
+                    <div class="link-wrapper">
+                        <a href="{{ route('register') }}" class="link">
+                            <h2 class="display-5">Register</h2>
+                            <img src="{{ asset('assets/svg/bulbasaur.svg') }}" alt="Bulbasaur Image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="{{ asset('js/app.js') }}"></script>
     </body>
 </html>

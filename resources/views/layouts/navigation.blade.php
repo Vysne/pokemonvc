@@ -18,6 +18,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#" style="color: white;">Trading</a>
                 </li>
+                @if(Auth::check())
+                    <li>
+                        <a href="#" class="nav-link" style="color: white;">Profile</a>
+                    </li>
+                @endif
             </ul>
             @if(Auth::check())
                 <div class="navbar-nav ms-auto">

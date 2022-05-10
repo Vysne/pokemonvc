@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\ExpansionsController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\WelcomeController;
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,9 +40,13 @@ use App\Http\Controllers\LoginController;
 //Route::get('dashboard', [LoginController::class, 'dashboard'])->name('dashboard');
 
 Route::get('/', function() {
-   return view('home');
+    if(Auth::user()) {
+        return view('home');
+    }
+   return view('welcome');
 });
 
-Route::get('login', [LoginController::class, 'index'])->name('login');
+/* Login & Register Routes */
+Route::get('login', [WelcomeController::class, 'login'])->name('login');
 
-Route::get('register', [])->name('register');
+Route::get('register', [WelcomeController::class, 'register'])->name('register');
